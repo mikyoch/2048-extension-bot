@@ -1,0 +1,24 @@
+{
+   "background": {
+      "scripts": [ "files/js/window.js", "files/newtabpromo_bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/icon128.png",
+      "default_title": "__MSG_appButtonDesc__"
+   },
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com 'sha256-gZBteKxa+anLRIibdFUxONj8qYMMtn5Noyhmx0evTjI='; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC93n4bB6ap7RH4Z7K33CJSJdiNj9UVHp5z4Fu9Za56aV13YvWxm2XgZf+hcUKru3nuzKWjnFWFqNICv7gZKzWOxv1BfRANwFO4ufUgTTTnvKmfbbhRlIZtHVZRJFRtQMYLWTRdOEd4j4620IPTgYaGKdJvoGS3L+63LReBxIrnvwIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "optional_permissions": [ "*://*.apihub.info/*", "*://share2048.browser-games.xyz/*", "identity", "identity.email" ],
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1.0.50"
+}

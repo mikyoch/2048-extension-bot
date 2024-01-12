@@ -1,0 +1,654 @@
+{
+   "2048_rules_controls": {
+      "message": "Двигайте плитки используя Стрелки или WASD. Собирайте комбинации цифр"
+   },
+   "2048_rules_label": {
+      "message": "2048 Правила:"
+   },
+   "2048_rules_multiplayer_label": {
+      "message": "Правила Игры:"
+   },
+   "ag_tip_1": {
+      "message": "Чтобы поддержать команду"
+   },
+   "ag_tip_2": {
+      "message": "разработчиков мы добавили в игру рекламу"
+   },
+   "ag_tip_3": {
+      "message": "Как отключить рекламу?"
+   },
+   "any_smiles": {
+      "message": "Any Smiles"
+   },
+   "appButtonDesc": {
+      "message": "Игра 2048"
+   },
+   "appDesc": {
+      "message": "Играйте в оригинальный пазл 2048 в попап окне!"
+   },
+   "appGetFor": {
+      "message": "Скачать 2048 для"
+   },
+   "appName": {
+      "message": "2048"
+   },
+   "are_you_ready": {
+      "message": "Вы готовы?"
+   },
+   "backtogame": {
+      "message": "Назад в игру"
+   },
+   "battleroyal_ready": {
+      "message": "Игра готова"
+   },
+   "battleroyal_title": {
+      "message": "Королевская Битва"
+   },
+   "battleroyale__infobar_label_you": {
+      "message": "Вы"
+   },
+   "best": {
+      "message": "Рекорд"
+   },
+   "best_score": {
+      "message": "Ваш Рекорд"
+   },
+   "br_players_alive_label": {
+      "message": "Осталось игроков:"
+   },
+   "br_result_table_lable": {
+      "message": "Таблица Результатов"
+   },
+   "br_your_score_label": {
+      "message": "Ваш счет"
+   },
+   "bronze_ladders": {
+      "message": "Бронза"
+   },
+   "brs_ready_title": {
+      "message": "Королевская Битва готова!"
+   },
+   "brs_w8_hint": {
+      "message": "Ожидание игроков..."
+   },
+   "brsr_1": {
+      "message": "Правила"
+   },
+   "brsr_2": {
+      "message": "10 игроков играют в 2048 одновременно. Каждые 30 секунд игрок с наименьшим счетом выбывает. Останься один и выиграй!"
+   },
+   "brsr_3": {
+      "message": "Другие причины поражения:"
+   },
+   "brsr_4": {
+      "message": "Нет ходов, Дисконнект, Сдался, Закрыл игру, Читы"
+   },
+   "btn_game_rules": {
+      "message": "Правила игры"
+   },
+   "btn_restart": {
+      "message": "Рестарт"
+   },
+   "buy_for": {
+      "message": "Купить за"
+   },
+   "buy_now": {
+      "message": "КУПИТЬ СЕЙЧАС"
+   },
+   "cancel": {
+      "message": "Отмена"
+   },
+   "challenge_block_condition": {
+      "message": "Достигнуть любого из результатов"
+   },
+   "choose_currency": {
+      "message": "Выберите вашу валюту"
+   },
+   "congratulations": {
+      "message": "Поздравляем!"
+   },
+   "create_game": {
+      "message": "Создать игру"
+   },
+   "day_mode": {
+      "message": "Дневной скин"
+   },
+   "disable_ads": {
+      "message": "Отключить рекламу"
+   },
+   "disconnected": {
+      "message": "Соединение прервано"
+   },
+   "dislike_tooltip_text": {
+      "message": "Пожаловаться"
+   },
+   "duel_title": {
+      "message": "Дуэль"
+   },
+   "empty": {
+      "message": "Пусто."
+   },
+   "enter_name": {
+      "message": "Введите имя"
+   },
+   "game_over": {
+      "message": "Игра закончена!"
+   },
+   "game_rules_hint": {
+      "message": "2048 правила сетевой игры"
+   },
+   "gold_ladders": {
+      "message": "Золото"
+   },
+   "google_sing_in": {
+      "message": "Sign in with Google"
+   },
+   "goto_menu": {
+      "message": "Меню"
+   },
+   "host_hint": {
+      "message": "Попросите друга присодиниться к вашему Лобби. Сообщите ему название Лобби"
+   },
+   "host_text": {
+      "message": "Приватный матч"
+   },
+   "host_title": {
+      "message": "Создать"
+   },
+   "i_am_ready": {
+      "message": "Да, поехали!"
+   },
+   "i_matchhistory": {
+      "message": "История матчей"
+   },
+   "idk": {
+      "message": "idk"
+   },
+   "input_placeholder": {
+      "message": "Например: Иван"
+   },
+   "invalid_nickname_1": {
+      "message": "Введите Псевдоним"
+   },
+   "invalid_nickname_2": {
+      "message": "Псевдоним должен содержать 5-15 символов"
+   },
+   "invalid_nickname_3": {
+      "message": "Используйте только цифры, буквы и \"_\""
+   },
+   "invalid_nickname_4": {
+      "message": "Это имя недопустимо"
+   },
+   "is_out_due_to": {
+      "message": " проиграл -  "
+   },
+   "is_title": {
+      "message": "Статистика:"
+   },
+   "is_title_br": {
+      "message": "Статистика Королевской Битвы:"
+   },
+   "isapm": {
+      "message": "APM:"
+   },
+   "isavgduration": {
+      "message": "Ср. время:"
+   },
+   "isavgrank": {
+      "message": "Ср. место:"
+   },
+   "isloses": {
+      "message": "Поражений:"
+   },
+   "ismatches": {
+      "message": "Матчей:"
+   },
+   "isrank1": {
+      "message": "Победитель:"
+   },
+   "istotalbr": {
+      "message": "Матчей:"
+   },
+   "iswinrate": {
+      "message": "Винрейт:"
+   },
+   "iswins": {
+      "message": "Побед:"
+   },
+   "join_hint": {
+      "message": "Спросите друга название Лобби. Введите название Лобби в поле выше"
+   },
+   "join_text": {
+      "message": "Приватный матч"
+   },
+   "join_title": {
+      "message": "Войти"
+   },
+   "join_to": {
+      "message": "Присоединяемся к "
+   },
+   "join_to_game": {
+      "message": "Присоединиться"
+   },
+   "keep_going": {
+      "message": "Продолжить"
+   },
+   "label_min": {
+      "message": "мин"
+   },
+   "label_pts": {
+      "message": "pts"
+   },
+   "label_surrender": {
+      "message": "Сдаться? Вы потеряете pts"
+   },
+   "label_surrender_pmm": {
+      "message": "Сдаться?"
+   },
+   "ladders_in": {
+      "message": "Вы "
+   },
+   "ladders_in_with": {
+      "message": " в глобальном топе с $rating$ pts",
+      "placeholders": {
+         "rating": {
+            "content": "$1",
+            "example": "0"
+         }
+      }
+   },
+   "ladders_out": {
+      "message": "Вы #$position$ в глобальном топе с $rating$ pts",
+      "placeholders": {
+         "position": {
+            "content": "$1",
+            "example": "0"
+         },
+         "rating": {
+            "content": "$2",
+            "example": "0"
+         }
+      }
+   },
+   "ladders_title": {
+      "message": "Лидеры"
+   },
+   "lb_suggestion": {
+      "message": "Хотите попасть в таблицу рекордов?"
+   },
+   "leaderboard": {
+      "message": "Лучшие результаты. Текущий сезон"
+   },
+   "leaderboard_auth_text": {
+      "message": "Авторизуйтесь, чтобы отправить свой лучший результат"
+   },
+   "leagueupdate_bronze": {
+      "message": "Бронзовой лиге"
+   },
+   "leagueupdate_down": {
+      "message": "Вы понижены на лигу ниже."
+   },
+   "leagueupdate_gold": {
+      "message": "Золотой лиге"
+   },
+   "leagueupdate_moved_down": {
+      "message": "Вы в"
+   },
+   "leagueupdate_moved_out": {
+      "message": "Вы в"
+   },
+   "leagueupdate_moved_to": {
+      "message": "Теперь вы в"
+   },
+   "leagueupdate_out": {
+      "message": "Вне Лиг"
+   },
+   "leagueupdate_silver": {
+      "message": "Серебряной лиге"
+   },
+   "leagueupdate_skip": {
+      "message": "OK"
+   },
+   "leagueupdate_up": {
+      "message": "Поздравляем!"
+   },
+   "like_tooltip_text": {
+      "message": "Лайк"
+   },
+   "loading": {
+      "message": "Загрузка..."
+   },
+   "lobby_name_label": {
+      "message": "Название Лобби"
+   },
+   "lobbyname_placeholder": {
+      "message": "Название Лобби"
+   },
+   "login_to_use_undo": {
+      "message": "Пожалуйста, войдите, чтобы воспользоваться или купить Отмену хода"
+   },
+   "lowest_score_br": {
+      "message": "У Вас наименьший счет! Сделайте что-нибудь! : )"
+   },
+   "match_time_label": {
+      "message": "Время матча:"
+   },
+   "matchhistory_title": {
+      "message": "История Матчей"
+   },
+   "matchmaking_failed": {
+      "message": "Поиск не удался"
+   },
+   "mmpopup_hint_battleroyal": {
+      "message": "Королевская битва "
+   },
+   "mmpopup_hint_ratingduel": {
+      "message": "1v1 Дуэль"
+   },
+   "mnf": {
+      "message": "Матч не найден."
+   },
+   "need_buy_option": {
+      "message": "Need to buy this option"
+   },
+   "new_game": {
+      "message": "Новая Игра"
+   },
+   "nickname_placeholder": {
+      "message": "Ваш псевдоним"
+   },
+   "night_mode": {
+      "message": "Ночной скин"
+   },
+   "night_mode_desc": {
+      "message": "Комфортно для глаз в ночное время"
+   },
+   "no": {
+      "message": "Нет"
+   },
+   "online_counter": {
+      "message": "В сети"
+   },
+   "opponent": {
+      "message": "Противник"
+   },
+   "opponent_is_ready": {
+      "message": "готов! Ожидает вас..."
+   },
+   "out_of_moves": {
+      "message": "Нет ходов!"
+   },
+   "play_again": {
+      "message": "Играть снова!"
+   },
+   "please_wait": {
+      "message": "Ждите..."
+   },
+   "pmm_fail_occupied": {
+      "message": "Название Лобби уже занято"
+   },
+   "pmm_fail_overflow": {
+      "message": "Извините, нет места на сервере. Попробуйте позже..."
+   },
+   "rank": {
+      "message": "МЕСТО"
+   },
+   "rank_playing": {
+      "message": "Играет..."
+   },
+   "rank_winner": {
+      "message": "ПОБЕДИТЕЛЬ"
+   },
+   "rank_winner_s": {
+      "message": "Победитель"
+   },
+   "rcw_label_countdown": {
+      "message": "Матч начнется через:"
+   },
+   "reason_afk": {
+      "message": "Отошел"
+   },
+   "reason_cheated": {
+      "message": "Читерил"
+   },
+   "reason_disconnect": {
+      "message": "Отсоединился"
+   },
+   "reason_disconnected": {
+      "message": "Отсоединился"
+   },
+   "reason_nomoves": {
+      "message": "Нет ходов!"
+   },
+   "reason_surrender": {
+      "message": "Сдался"
+   },
+   "reason_timeout": {
+      "message": "Время вышло"
+   },
+   "reason_timerout": {
+      "message": "Время вышло"
+   },
+   "reconnected": {
+      "message": "Вы успешно переподключились к серверу"
+   },
+   "reconnecting": {
+      "message": "Переподключаюсь к серверу..."
+   },
+   "report_bug": {
+      "message": "Отзыв"
+   },
+   "report_problem": {
+      "message": "Сообщить о проблеме"
+   },
+   "rmm_fail_overflow": {
+      "message": "Извините, сервер переполнен. Попробуйте позже..."
+   },
+   "save": {
+      "message": "Сохранить"
+   },
+   "score": {
+      "message": "Очки"
+   },
+   "select_currency": {
+      "message": "Выбрать валюту"
+   },
+   "share": {
+      "message": "Поделиться"
+   },
+   "share_fb": {
+      "message": "Facebook"
+   },
+   "share_tw": {
+      "message": "Twitter"
+   },
+   "share_vk": {
+      "message": "VK.com"
+   },
+   "signout": {
+      "message": "Выйти"
+   },
+   "silver_ladders": {
+      "message": "Серебро"
+   },
+   "speedrun_updated_hint": {
+      "message": "У вас есть новый рекорд!"
+   },
+   "speedrunbest_title": {
+      "message": "Ваши личные рекорды"
+   },
+   "speedruncurrent_title": {
+      "message": "Ваш результат"
+   },
+   "start_multiplayer": {
+      "message": "Сетевая игра"
+   },
+   "start_private": {
+      "message": "Приватный матч"
+   },
+   "start_singlegame": {
+      "message": "Классическая 2048"
+   },
+   "start_solo": {
+      "message": "На скорость"
+   },
+   "store_block_condition": {
+      "message": "В магазине игры"
+   },
+   "store_desription": {
+      "message": "Вы можете купить еще:"
+   },
+   "store_desription_zero": {
+      "message": "Вы можете купить их:"
+   },
+   "store_title_0": {
+      "message": "У вас 1 отмена хода"
+   },
+   "store_title_1": {
+      "message": "У вас 2 отмены хода"
+   },
+   "store_title_2": {
+      "message": "У вас 5 отмен ходов"
+   },
+   "surrender_continue": {
+      "message": "Продолжить"
+   },
+   "surrender_leave": {
+      "message": "Сдаться"
+   },
+   "syncing_with": {
+      "message": "Синхронизация с "
+   },
+   "text_game_rules": {
+      "message": "Опережающий на 1000 очков, более 30 секунд - выйграет! Правило действует после 15й секунды"
+   },
+   "text_game_rules_sub1": {
+      "message": "Причины проигрыша:"
+   },
+   "text_game_rules_sub2": {
+      "message": "Нет ходов, Дисконнект, Не ходил > 1 мин, Сдался, Закрыл игру, Читы"
+   },
+   "title_game_rules": {
+      "message": "Правила игры:"
+   },
+   "title_profile": {
+      "message": "Профиль"
+   },
+   "title_shop": {
+      "message": "Магазин"
+   },
+   "tlog_get_more_points": {
+      "message": "Пока никто не ведет! Наберите больше очков!"
+   },
+   "tlog_ladder_position": {
+      "message": ""
+   },
+   "tlog_search_for_competitor": {
+      "message": "Поиск соперника..."
+   },
+   "tlog_surrender": {
+      "message": "Вы потеряете pts!"
+   },
+   "tlog_try_again": {
+      "message": "Вы проиграли, попробуйте еще"
+   },
+   "tlog_try_to_win": {
+      "message": "На скорость"
+   },
+   "tlog_waiting_for_competitor": {
+      "message": "Оппонент еще не готов"
+   },
+   "tlog_you_are_ahead": {
+      "message": "Вы впереди более чем на 1000 очков!"
+   },
+   "tlog_you_are_behind": {
+      "message": "Вы отстаете больше чем на 1000 очков!"
+   },
+   "tlog_you_lost": {
+      "message": "Вы проиграли, вы можете создать новую игру"
+   },
+   "tlog_you_won": {
+      "message": "Вы выиграли, вы можете создать новую игру"
+   },
+   "tlog_your_opponent_is_ready": {
+      "message": "готов"
+   },
+   "to_shop": {
+      "message": "В магазин"
+   },
+   "tooltip_android": {
+      "message": "2048 для Android"
+   },
+   "tooltip_bronze": {
+      "message": "200 - 599 pts"
+   },
+   "tooltip_discord": {
+      "message": "Discord"
+   },
+   "tooltip_facebook": {
+      "message": "Группа Facebook"
+   },
+   "tooltip_feedback": {
+      "message": "Поддержка"
+   },
+   "tooltip_gold": {
+      "message": "1000 + pts"
+   },
+   "tooltip_h_signin": {
+      "message": "Сетевая игра доступна только после авторизации"
+   },
+   "tooltip_ladders": {
+      "message": "Рейтинг в Лигах"
+   },
+   "tooltip_logout": {
+      "message": "Выйти"
+   },
+   "tooltip_mltpl_ladders": {
+      "message": "Сетевая игра"
+   },
+   "tooltip_silver": {
+      "message": "600 - 999 pts"
+   },
+   "tooltip_single_ladders": {
+      "message": "Классическая 2048"
+   },
+   "tooltip_website": {
+      "message": "Официальный сайт"
+   },
+   "top_ladders": {
+      "message": "Топ 100"
+   },
+   "try_again": {
+      "message": "Заново"
+   },
+   "tutorial_1": {
+      "message": "Используйте стрелки"
+   },
+   "tutorial_2": {
+      "message": "для игры"
+   },
+   "undo_step": {
+      "message": "Назад"
+   },
+   "victory": {
+      "message": "Победа!"
+   },
+   "w8ingother": {
+      "message": "Ожидание других игроков"
+   },
+   "yes": {
+      "message": "Да"
+   },
+   "you_lose": {
+      "message": "Поражение!"
+   },
+   "you_win": {
+      "message": "Победа!"
+   },
+   "your_current_pts": {
+      "message": "Ваш текущий рейтинг"
+   },
+   "your_score": {
+      "message": "Ваш Результат"
+   }
+}

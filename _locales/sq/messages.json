@@ -1,0 +1,654 @@
+{
+	"appButtonDesc": {
+		"message": "2048 game"
+	},
+	"appName": {
+		"message": "2048"
+	},
+	"appGetFor": {
+		"message": "Get 2048 for"
+	},
+	"appDesc": {
+		"message": "Play original 2048 puzzle game in popup anytime you want!"
+	},
+	"tutorial_1": {
+		"message": "Use your keyboard"
+	},
+	"tutorial_2": {
+		"message": "to play"
+	},
+	"new_game": {
+		"message": "New Game"
+	},
+	"score": {
+		"message": "Score"
+	},
+	"best": {
+		"message": "Best"
+	},
+	"keep_going": {
+		"message": "Keep going"
+	},
+	"try_again": {
+		"message": "Try again"
+	},
+	"loading": {
+		"message": "Loading..."
+	},
+	"empty": {
+		"message": "Empty."
+	},
+	"enter_name": {
+		"message": "Enter your name"
+	},
+	"input_placeholder": {
+		"message": "Example: Mike"
+	},
+	"save": {
+		"message": "Save"
+	},
+	"cancel": {
+		"message": "Cancel"
+	},
+	"yes": {
+		"message": "Yes"
+	},
+	"no": {
+		"message": "No"
+	},
+	"congratulations": {
+		"message": "Congratulations!"
+	},
+	"your_score": {
+		"message": "Your Score"
+	},
+	"lb_suggestion": {
+		"message": "Want to get to the highscore table?"
+	},
+	"victory": {
+		"message": "You win!"
+	},
+	"game_over": {
+		"message": "Game Over!"
+	},
+	"leaderboard": {
+		"message": "Top Score. Current season"
+	},
+	"backtogame": {
+		"message": "Back to your game"
+	},
+	"undo_step": {
+		"message": "Undo"
+	},
+	"google_sing_in": {
+		"message": "Sign in with Google"
+	},
+	"signout": {
+		"message": "Signout"
+	},
+	"store_title_0": {
+		"message": "You have 1 undo move"
+	},
+	"store_title_1": {
+		"message": "You have 2 undo moves"
+	},
+	"store_title_2": {
+		"message": "You have 5 undo moves"
+	},
+	"store_desription": {
+		"message": "You can buy more:"
+	},
+	"store_desription_zero": {
+		"message": "You can buy them:"
+	},
+	"login_to_use_undo": {
+		"message": "Please login to use or buy Undo Moves"
+	},
+	"choose_currency": {
+		"message": "Choose your currency"
+	},
+	"report_problem": {
+		"message": "Report a problem"
+	},
+	"night_mode": {
+		"message": "Night Mode"
+	},
+	"night_mode_desc": {
+		"message": "Comfort for your eyes when at night"
+	},
+	"to_shop": {
+		"message": "Shop"
+	},
+	"buy_for": {
+		"message": "BUY NOW"
+	},
+	"buy_now": {
+		"message": "BUY NOW"
+	},
+	"battleroyale__infobar_label_you": {
+		"message": "You"
+	},
+	"rank": {
+		"message": "RANK"
+	},
+	"rank_playing": {
+		"message": "Playing..."
+	},
+	"rank_winner_s": {
+		"message": "Winner"
+	},
+	"rank_winner": {
+		"message": "WINNER"
+	},
+	"lowest_score_br": {
+		"message": "You have lowest score! Do something! : )"
+	},
+	"invalid_nickname_1": {
+		"message": "Please enter Nickname"
+	},
+	"invalid_nickname_2": {
+		"message": "Nickname must have 5-15 characters"
+	},
+	"invalid_nickname_3": {
+		"message": "Use only numbers, alphabets and underscores"
+	},
+	"invalid_nickname_4": {
+		"message": "This nickname is not allowed"
+	},
+	"rcw_label_countdown": {
+		"message": "The match will begin in:"
+	},
+	"you_win": {
+		"message": "YOU WIN!"
+	},
+	"you_lose": {
+		"message": "YOU LOSE!"
+	},
+	"br_result_table_lable": {
+		"message": "Result Table"
+	},
+	"leagueupdate_moved_to": {
+		"message": "You have moved to"
+	},
+	"leagueupdate_moved_down": {
+		"message": "You are in"
+	},
+	"leagueupdate_moved_out": {
+		"message": "You are"
+	},
+	"leagueupdate_skip": {
+		"message": "OK"
+	},
+	"br_players_alive_label": {
+		"message": "Players alive:"
+	},
+	"br_your_score_label": {
+		"message": "Your score"
+	},
+	"brs_ready_title": {
+		"message": "Battle Royale is ready!"
+	},
+	"brsr_1": {
+		"message": "Rules"
+	},
+	"brsr_2": {
+		"message": "10 players play 2048 in real-time. Every 30 seconds player with lowest score is out. Be last man standing to win!"
+	},
+	"brsr_3": {
+		"message": "Other loss reasons:"
+	},
+	"brsr_4": {
+		"message": "No Moves, Disconnect, Surrender or Game Close"
+	},
+	"brs_w8_hint": {
+		"message": "Waiting for players..."
+	},
+	"w8ingother": {
+		"message": "Waiting for other players"
+	},
+	"battleroyal_title": {
+		"message": "Battle Royale"
+	},
+	"battleroyal_ready": {
+		"message": "Game is ready"
+	},
+	"duel_title": {
+		"message": "Duel"
+	},
+	"leagueupdate_up": {
+		"message": "Congratulations!"
+	},
+	"leagueupdate_down": {
+		"message": "You have been lowered to a league below."
+	},
+	"leagueupdate_bronze": {
+		"message": "Bronze League"
+	},
+	"leagueupdate_silver": {
+		"message": "Silver League"
+	},
+	"leagueupdate_gold": {
+		"message": "Gold League"
+	},
+	"leagueupdate_out": {
+		"message": "Out of League"
+	},
+	"are_you_ready": {
+		"message": "Are you ready?"
+	},
+	"disconnected": {
+		"message": "Disconnected from server."
+	},
+	"reconnecting": {
+		"message": "Reconnecting to server..."
+	},
+	"reconnected": {
+		"message": "You are reconnected to server successfully."
+	},
+	"i_am_ready": {
+		"message": "Yes, Go!"
+	},
+	"goto_menu": {
+		"message": "Menu"
+	},
+	"is_title_br": {
+		"message": "Statistic Battle Royale:"
+	},
+	"isrank1": {
+		"message": "Winner:"
+	},
+	"isavgrank": {
+		"message": "Avg Rank:"
+	},
+	"istotalbr": {
+		"message": "Matches:"
+	},
+	"is_title": {
+		"message": "Statistics:"
+	},
+	"ismatches": {
+		"message": "Matches:"
+	},
+	"isapm": {
+		"message": "APM:"
+	},
+	"isavgduration": {
+		"message": "Avg. duration:"
+	},
+	"iswins": {
+		"message": "Wins:"
+	},
+	"isloses": {
+		"message": "Loses:"
+	},
+	"iswinrate": {
+		"message": "Winrate:"
+	},
+	"i_matchhistory": {
+		"message": "Match History"
+	},
+	"matchhistory_title": {
+		"message": "Match History"
+	},
+	"please_wait": {
+		"message": "Please wait..."
+	},
+	"opponent": {
+		"message": "Opponent"
+	},
+	"opponent_is_ready": {
+		"message": "is ready! Waiting for you ..."
+	},
+	"start_multiplayer": {
+		"message": "Multiplayer"
+	},
+	"start_private": {
+		"message": "Private Lobby"
+	},
+	"start_solo": {
+		"message": "Speedrun"
+	},
+	"speedrunbest_title": {
+		"message": "Your Best Speedruns"
+	},
+	"speedruncurrent_title": {
+		"message": "Speedrun results"
+	},
+	"speedrun_updated_hint": {
+		"message": "You've updated your best speedruns"
+	},
+	"btn_game_rules": {
+		"message": "Game rules"
+	},
+	"title_game_rules": {
+		"message": "Game Rules:"
+	},
+	"title_profile": {
+		"message": "Profile"
+	},
+	"btn_restart": {
+		"message": "Restart"
+	},
+	"2048_rules_label": {
+		"message": "2048 Rules:"
+	},
+	"2048_rules_controls": {
+		"message": "Use the arrows or WASD to move. Collect combination of numbers"
+	},
+	"2048_rules_multiplayer_label": {
+		"message": "Multiplayer Game Rules:"
+	},
+	"game_rules_hint" : {
+		"message": "Rules of the game and multiplayer"
+	},
+	"text_game_rules": {
+		"message": "Player who is 1000 points ahead over 30 seconds - WINS! Time's Up rule works after 15 seconds"
+	},
+	"text_game_rules_sub1": {
+		"message": "Reasons why you may LOSE:"
+	},
+	"text_game_rules_sub2": {
+		"message": "No Moves, Disconnect, > 1 min Idle, Surrender or Game Close, Cheating"
+	},
+	"syncing_with": {
+		"message": "Syncing with "
+	},
+	"report_bug": {
+		"message": "Feedback"
+	},
+	"ladders_title": {
+		"message": "Leaderboards"
+	},
+	"host_title": {
+		"message": "Host Game"
+	},
+	"host_text": {
+		"message": "Create a game"
+	},
+	"lobby_name_label": {
+		"message": "Lobby name"
+	},
+	"create_game": {
+		"message": "Create Game"
+	},
+	"host_hint": {
+		"message": "Share a Lobby name with a friend. Ask him to Join Game"
+	},
+	"join_to_game": {
+		"message": "Enter the game"
+	},
+	"lobbyname_placeholder": {
+		"message": "Lobby Name"
+	},
+	"join_hint": {
+		"message": "Ask Host for a Lobby name. Enter Lobby name into a field above"
+	},
+	"join_text": {
+		"message": "Enter friend's lobby name"
+	},
+	"join_title": {
+		"message": "Join Game"
+	},
+	"join_to": {
+		"message": "Join to "
+	},
+	"bronze_ladders": {
+		"message": "Bronze"
+	},
+	"silver_ladders": {
+		"message": "Silver"
+	},
+	"gold_ladders": {
+		"message": "Gold"
+	},
+	"top_ladders": {
+		"message": "Top 100"
+	},
+	"tooltip_bronze": {
+		"message": "200 - 599 pts"
+	},
+	"tooltip_silver": {
+		"message": "600 - 999 pts"
+	},
+	"tooltip_gold": {
+		"message": "1000 + pts"
+	},
+	"tooltip_logout": {
+		"message": "Log Out"
+	},
+	"tooltip_feedback": {
+		"message": "Support"
+	},
+	"tooltip_facebook": {
+		"message": "Facebook Group"
+	},
+	"tooltip_ladders": {
+		"message": "League Ranking"
+	},
+	"tooltip_website": {
+		"message": "Official Website"
+	},
+	"tooltip_android": {
+		"message": "2048 for Android"
+	},
+	"tooltip_discord": {
+		"message": "Discord"
+	},
+	"ladders_out": {
+		"message": "Your rank is #$position$ in global top with $rating$ pts",
+		"placeholders": {
+			"position": {
+	        	"content": "$1",
+	        	"example": "0"
+	      	},
+	      	"rating": {
+	        	"content": "$2",
+	        	"example": "0"
+	      	}
+	    }
+	},
+	"ladders_in": {
+		"message": "Your rank is "
+	},
+	"ladders_in_with": {
+		"message": " in global top with $rating$ pts",
+		"placeholders": {
+	      	"rating": {
+	        	"content": "$1",
+	        	"example": "0"
+	      	}
+	    }
+	},
+	"play_again": {
+		"message": "Play again!"
+	},
+	"share": {
+		"message": "Share"
+	},
+	"share_fb": {
+		"message": "Facebook"
+	},
+	"share_tw": {
+		"message": "Twitter"
+	},
+	"share_vk": {
+		"message": "VK.com"
+	},
+	"nickname_placeholder": {
+		"message": "Your nickname"
+	},
+	"label_min": {
+		"message": "min"
+	},
+	"label_pts": {
+		"message": "pts"	
+	},
+	"is_out_due_to": {
+		"message":"is out due to"
+	},
+	"reason_nomoves": {
+		"message": "No Moves"
+	},
+	"reason_cheated": {
+		"message": "Cheated"
+	},
+	"reason_surrender": {
+		"message": "Surrender"
+	},
+	"reason_disconnected": {
+		"message": "Disconnected"
+	},
+	"reason_disconnect": {
+		"message": "Disconnected"
+	},
+	"reason_timeout": {
+		"message": "Time's Up"
+	},
+	"reason_timerout": {
+		"message": "Time's Up"
+	},
+	"reason_afk": {
+		"message": "Idle"
+	},
+	"matchmaking_failed": {
+		"message": "Search failed"
+	},
+	"rmm_fail_overflow": {
+		"message": "Sorry, servers are overloaded. Try again later..."
+	},
+	"pmm_fail_overflow": {
+		"message": "Sorry, no server room. Try again later..."
+	},
+	"pmm_fail_occupied": {
+		"message": "Lobby name already occupied"
+	},
+	"mnf": {
+		"message": "Match not found"
+	},
+	"idk": {
+		"message": "idk"
+	},
+	"match_time_label": {
+		"message": "Match time:"
+	},
+	"out_of_moves": {
+		"message": "Out of moves!"
+	},
+	"best_score": {
+		"message": "Best Record"
+	},
+	"label_surrender": {
+		"message": "Surrender? You will lose pts"
+	},
+	"label_surrender_pmm": {
+		"message": "Surrender?"
+	},
+	"surrender_leave": {
+		"message": "Surrender"
+	},
+	"surrender_continue": {
+		"message": "Continue"
+	},
+	"tlog_surrender": {
+		"message": "You will lose pts!"
+	},
+	"tlog_you_won": {
+		"message": "You won in this game, you can start a new one"
+	},
+	"tlog_you_lost": {
+		"message": "You lost in this game, you can start a new one"
+	},
+	"tlog_search_for_competitor": {
+		"message": "Searching for competitor..."
+	},
+	"tlog_ladder_position": {
+		"message": ""
+	},
+	"tlog_your_opponent_is_ready": {
+		"message": "is ready"
+	},
+	"tlog_waiting_for_competitor": {
+		"message": "Opponent is not ready yet"
+	},
+	"tlog_get_more_points": {
+		"message": "No one leads yet! Get more points!"
+	},
+	"tlog_try_to_win": {
+		"message": "Speedrun"
+	},
+	"online_counter": {
+		"message": "Online"
+	},
+	"tlog_you_are_behind": {
+		"message": "You are behind by more than 1000 points!"
+	},
+	"tlog_you_are_ahead": {
+		"message": "You are ahead by more than 1000 points!"
+	},
+	"tlog_try_again": {
+		"message": "Game over, try again"
+	},
+	"your_current_pts": {
+		"message": "Your current pts is"
+	},
+	"like_tooltip_text": {
+		"message": "Like"
+	},
+	"dislike_tooltip_text": {
+		"message": "Report"
+	},
+	"title_shop": {
+		"message": "Shop"
+	},
+	"select_currency": {
+		"message": "Select currency"
+	},
+	"any_smiles": {
+		"message": "Any Smiles"
+	},
+	"need_buy_option": {
+		"message": "Need to buy this option"
+	},
+	"day_mode": {
+		"message": "Day mode"
+	},
+	"start_singlegame": {
+		"message": "Classic 2048"
+	},
+	"tooltip_h_signin": {
+		"message": "Multiplayer is only available after Sign in"
+	},
+	"tooltip_mltpl_ladders": {
+		"message": "Rating mode «Multiplayer»"
+	},
+	"tooltip_single_ladders": {
+		"message": "Rating mode «Classic 2048"
+	},
+	"leaderboard_auth_text": {
+		"message": "Please login to send your Best Score to Leaderboard"
+	},
+	"mmpopup_hint_ratingduel": {
+		"message": "1v1 Duel"
+	},
+	"mmpopup_hint_battleroyal": {
+		"message": "Battle Royale "
+	},
+	"disable_ads": {
+		"message": "Disable ads"
+	},
+	"ag_tip_1": {
+		"message": "In order to sustain development team,"
+	},
+	"ag_tip_2": {
+		"message": "we have added Ads into the game"
+	},
+	"ag_tip_3": {
+		"message": "How to disable Ads?"
+	},
+	"challenge_block_condition": {
+		"message": "Reach any of these achievements"
+	},
+	"store_block_condition": {
+		"message": "2048 Game Store"
+	}
+}

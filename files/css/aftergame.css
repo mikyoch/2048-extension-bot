@@ -1,0 +1,148 @@
+/* Overlay */
+.aftergame_modal-overlay {
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .8);
+  z-index: 100;
+}
+
+.aftergame_modal-open:checked ~ .aftergame_modal,
+.aftergame_modal-open:checked ~ .aftergame_modal-overlay {
+  display: block;
+}
+
+.aftergame_modal {
+  display: none;
+	width: 320px;
+  box-sizing: content-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: #faf8ef;
+  z-index: 101;
+}
+
+.aftergame_modal_transparent {
+  background: none !important;
+}
+
+.aftergame_btn-close {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  cursor: pointer;
+}
+
+.aftergame_disable_button {
+  margin: 2px 2px 4px 2px;
+  cursor: pointer;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+}
+
+.aftergame_disable_button:hover {
+  text-decoration: underline;
+}
+
+.aftergame_modal a {
+  max-width: 300px;
+  max-height: 400px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.aftergame_modal a img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 400px;
+}
+
+.aftergame-tips {
+    background-color: #faf8ef;
+    padding: 20px;
+    font-size: 12px;
+    height: 330px;
+    margin-top: 94px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.ag_tip-description {
+  padding-bottom: 26px;
+  text-align: center;
+}
+
+.ag_tip-bold {
+  font-weight: bold;
+}
+
+.ag_tip-condition_container {
+  background: #EEE4DA;
+  border: 2px solid rgba(187, 173, 161, 0.25);
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin: 8px 0px 16px;
+  padding-top: 26px;
+  position: relative;
+}
+
+.ag_tip-info_block {
+  border-bottom: 1px solid rgba(187, 173, 161, 0.25);
+  padding: 6px 0px;
+  margin: 0px 6px;
+}
+
+.ag_tip-info_block:last-child {
+  border: none;
+  padding-bottom: 16px;
+}
+
+.ag_tip-info_block > div {
+  display: inline-block;
+  width: 50%;
+  text-align: left;
+}
+.ag_tip-name_block {
+  color: #8E7966;
+}
+
+.ag_tip-sorry_img {
+  width: 120px;
+  height: 102px;
+  position: absolute;
+  top: 0;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  background-image: url(/files/images/sorry-kitten.png);
+}
+
+.ag_tip-store_block .ag_tip-cond_block {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.ag_tip-condition_head {
+    color: #EEE4DA;
+    background: #8E7966;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 2px 12px;
+    position: absolute;
+    top: -9px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: fit-content;
+}

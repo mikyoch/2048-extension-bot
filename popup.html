@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto:400,900">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="./icons/icon16.png" sizes="16x16"/>
+	<link rel="icon" type="image/png" href="./icons/icon48.png"/>
+	<link href="./files/css/popup.css" rel="stylesheet" type="text/css">
+	<link href="./single_files/popup.css" rel="stylesheet" type="text/css">
+	<script src="./files/js/socket.io.js"></script>
+	<link href="./files/css/aftergame.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<button class="bot-play">start</button>
+	<button class="bot-stop">stop</button>
+	<div class="screen preload">
+		<div class="header">
+			<img src="./files/images/close-icon.svg" class="close-btn" />
+			<img src="./files/images/arrow-pointing-to-left.svg" class="arrow-back" />
+			<img id="rollup_btn1" src="./files/images/arrow-back-outline.svg" class="rollup_btn" />
+			<img id="rollup_btn2" src="./files/images/arrow-back-outline.svg" class="rollup_btn" />
+			<img id="signout" src="./files/images/out.svg" class="logout" />
+			<span class="tooltiptext tt_logout" l_content="tooltip_logout"></span>
+			<p class="title" l_content="appName"></p>
+			<img id="ladderboard" src="./files/images/ladders-ico.svg" class="ladders" />
+			<span class="tooltiptext tt_ladders" l_content="ladders_title"></span>
+			<div id="header_signin" class="h_signin">
+				<img src="./files/images/google.svg" class="google" />
+				<p l_content="google_sing_in"></p>
+			</div>
+			<span class="tooltiptext tt_h_signin" l_content="tooltip_h_signin"></span>
+			<input class="lobby" value="" readonly />
+			<img src="./files/images/copy.svg" class="copy_lobby" />
+			<img id="shop_btn" src="./files/images/icon-shop.svg" class="shop_btn" />
+			<img id="eye_btn" src="./files/images/icon-eye.svg" class="eye_btn" />
+			<div id="mltpl_ladders" class="mltpl_ladders ladder-selector selected"><img src="./files/images/multiplayer-copy.svg" /></div>
+			<span class="tooltiptext tt_mltpl_ladders" l_content="tooltip_mltpl_ladders"></span>
+			<div id="single_ladders" class="single_ladders ladder-selector"><img src="./files/images/play.svg" /></div>
+			<span class="tooltiptext tt_single_ladders" l_content="tooltip_single_ladders"></span>
+		</div>
+		<div class="content">
+			<!-- Preload, RMM Search -->
+			<div class="loading">
+				<div class="frag1"></div>
+				<div class="frag2"></div>
+				<div class="frag3"></div>
+				<div class="frag4"></div>
+				<div class="mfrag1"></div>
+				<div class="mfrag2"></div>
+				<div class="mfrag3"></div>
+			</div>
+			<p class="loading_text" l_content="loading"></p>
+			<img id='cancel' src="./files/images/icon-cancel.svg" class="icon_cancel" />
+			<!-- SignIn -->
+			<div id="google_sign_in" class="google_sign_in">
+				<img src="./files/images/google.svg" class="google" />
+				<p l_content="google_sing_in"></p>
+			</div>
+			<!-- Main -->
+			<div class="short_info">
+				<div class="short_info_rating">
+					<div class="sir_aligner">
+				  		<img src="files/images/icon-pts.svg" class="short_info_icon_pts" /><p class="short_info_value"></p>
+				  		<span class='vliner'></span>
+			  		</div>
+			  	</div>
+			  	<div class="short_info_top_position">
+			  		<div class="sitp_aligner">
+				  		<img src="files/images/ladders-ico.svg" class="short_info_ladders_ico" /><p class="short_info_value"></p>
+				  		<span class='vliner'></span>
+			  		</div>
+			  	</div>
+			  	<div class="short_info_league">
+			  		<img src="files/images/icon-bronzeladders.svg" class="short_info_icon_ladders ignore_replace" /><p class="short_info_value"></p>
+			  	</div>
+			</div>
+			<div id="content_signin" class="content_signin">
+				<div class="button_part">
+					<img src="./files/images/google.svg" class="google" />
+				</div>
+				<p l_content="google_sing_in"></p>
+			</div>
+			<span class="tooltiptext tt_content_signin" l_content="tooltip_h_signin"></span>
+			<div class="nickname_wrapper">
+				<img src="./files/images/profile-option.svg" class="profile-option" data-profile="0" />
+				<input id="nickname" class="input-nickname center" type="text" l_content="nickname_placeholder" l_attr="placeholder" disabled/>
+				<p class="nickname_error"></p>
+				<img src="./files/images/gear-option.svg" class="gear-option" />
+				<img src="./files/images/save.svg" class="save hidden" />
+				<img src="./files/images/cancel.svg" class="cancel hidden" />
+			</div>
+			<div class="menu_button_indicator">
+				<img src="./files/images/triangle-left.svg">
+				<img src="./files/images/triangle-right.svg">
+			</div>
+			<div class="menu_button single_play active" tabindex="0">
+				<div class="button_part">
+					<img src="./files/images/play.svg"/>
+				</div>
+				<p l_content="start_singlegame"></p>
+			</div>
+			<div class="menu_button ranked_play" tabindex="0">
+				<div class="button_part">
+					<img src="./files/images/multiplayer-copy.svg"/>
+				</div>
+				<p l_content="start_multiplayer"></p>
+			</div>
+			<div class="menu_button solo_play" tabindex="0">
+				<div class="button_part">
+					<img src="./files/images/speedrun.svg"/>
+				</div>
+				<p l_content="start_solo"></p>
+			</div>
+			<div class="menu_button unranked_play" tabindex="0">
+				<div class="button_part">
+					<img width="25px" height="25px" src="./files/images/privatematch.svg"/>
+				</div>
+				<p l_content="start_private"></p>
+			</div>
+			<!-- Game Rules -->
+			<div class="up">
+				<img src="./files/images/arrow-pointing-to-up.svg" class="arrow-up" />
+			</div>
+			<div class="left_down_right">
+				<div class="left">
+					<img src="./files/images/arrow-pointing-to-left.svg" class="arrow-left" />
+				</div>
+				<div class="down">
+					<img src="./files/images/arrow-pointing-to-down.svg" class="arrow-down" />
+				</div>
+				<div class="right">
+					<img src="./files/images/arrow-pointing-to-right.svg" class="arrow-right" />
+				</div>
+			</div>
+			<p class="rules_tutorial" l_content="2048_rules_controls"></p>
+			<p class="multiplayer_rules_label" l_content="2048_rules_multiplayer_label"></p>
+			<p class="multiplayer_rules_tutorial" l_content="text_game_rules"></p>
+			<p class="multiplayer_rules_tutorial_sub1" l_content="text_game_rules_sub1"></p>
+			<p class="multiplayer_rules_tutorial_sub2" l_content="text_game_rules_sub2"></p>
+			<!-- Ladders -->
+			<div class="ladders_page">
+				<div class="tabs">
+					<div class="tab tab-bronze">
+						<div class="tab-icon"></div>
+						<div class="tab-title" l_content="bronze_ladders"></div>
+						<span class="tooltiptext" l_content="tooltip_bronze"></span>
+					</div>
+					<div class="tab tab-silver">
+						<div class="tab-icon"></div>
+						<div class="tab-title" l_content="silver_ladders"></div>
+						<span class="tooltiptext" l_content="tooltip_silver"></span>
+					</div>
+					<div class="tab tab-gold">
+						<div class="tab-icon"></div>
+						<div class="tab-title" l_content="gold_ladders"></div>
+						<span class="tooltiptext" l_content="tooltip_gold"></span>
+					</div>
+					<div class="tab tab-top100 active">
+						<div class="tab-icon"></div>
+						<div class="tab-title" l_content="top_ladders"></div>
+					</div>
+				</div>
+				<div class="ladders-view top100">
+					<div></div>
+					<div></div>
+					<div class="ladders-grid"></div>
+				</div>
+				<!-- 2048 single leaderboard -->
+				<div id="table-wrap" class="single_ladders-view">
+					<div id="table" l_attr="loading-text,empty-text" l_content="loading,empty" loading-text="Loading..." empty-text="Empty.">
+					</div>
+				</div>
+			</div>
+			<!-- Battle Royale Search -->
+			<div class="battleroyal_search">
+				<div class="brs_search">
+					<div class="loading_brs">
+						<div class="frag1"></div>
+						<div class="frag2"></div>
+						<div class="frag3"></div>
+						<div class="frag4"></div>
+						<div class="mfrag1"></div>
+						<div class="mfrag2"></div>
+						<div class="mfrag3"></div>
+					</div>
+					<p class="brs_w8_text" l_content="brs_w8_hint"></p>
+				</div>
+				<div class="brs_info">
+					<img src="./files/images/players.svg" class="brs_info_players">
+					<p class="brs_info_counter">0 / 10</p>
+				</div>
+				<div class="brs_rules">
+					<p class="brsr_1" l_content="brsr_1"></p>
+					<p class="brsr_2" l_content="brsr_2"></p>
+					<p class="brsr_3" l_content="brsr_3"></p>
+					<p class="brsr_4" l_content="brsr_4"></p>
+				</div>
+			</div>
+			<!-- Battle Royale Ready -->
+			<div class="battleroyal_ready">
+				<div class="brs_search">
+					<img src="./files/images/crown.svg" class="brs_ready">
+					<p class="brs_ready_title" l_content="brs_ready_title"></p>
+				</div>
+				<div class="brs_info">
+					<p class="brs_ready_counter">3..</p>
+				</div>
+				<div class="brs_player_list">
+					<div class="brs_player_list__table">
+						<div class="brsplt_1">
+							<img src="" class="brsplt-avatar" />
+							<p class="brplt_nickname"></p>
+						</div>
+						<div class="brsplt_2">
+							<img src="" class="brsplt-avatar" />
+							<p class="brplt_nickname"></p>
+						</div>
+						<div class="brsplt_3">
+							<img src="" class="brsplt-avatar" />
+							<p class="brplt_nickname"></p>
+						</div>
+						<div class="brsplt_4">
+							<img src="" class="brsplt-avatar" />
+							<p class="brplt_nickname"></p>
+						</div>
+						<div class="brsplt_5">
+							<img src="" class="brsplt-avatar" />
+							<p class="brplt_nickname"></p>
+						</div>
+						<div class="brsplt_6">
+							<img src="" class="brsplt-avatar" />
+							<p class="brplt_nickname"></p>
+						</div>
+						<div class="brsplt_7">
+							<img src="" class="brsplt-avatar" />
+							<p class="brplt_nickname"></p>
+						</div>
+						<div class="brsplt_8">
+							<img src="" class="brsplt-avatar" />
+							<p class="brplt_nickname"></p>
+						</div>
+						<div class="brsplt_9">
+							<img src="" class="brsplt-avatar" />
+							<p class="brplt_nickname"></p>
+						</div>
+						<div class="brsplt_10">
+							<img src="" class="brsplt-avatar" />
+							<p class="brplt_nickname"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Public Ranked Lobby -->
+			<div class="public_lobby">
+				<div class="menu_button_indicator">
+					<img src="./files/images/triangle-left.svg">
+					<img src="./files/images/triangle-right.svg">
+				</div>
+				<div class="battle_royal pl_button" tabindex="0">
+					<img src="./files/images/crown.svg" class="battleroyal_match" />
+					<div class="battleroyal_label" l_content="battleroyal_title"></div>
+				</div>
+				<div class="duel pl_button" tabindex="0">
+					<img src="./files/images/duels.svg" class="duel_match" />
+					<div class="duel_label" l_content="duel_title"></div>
+				</div>
+			</div>
+			<!-- Private Unranked Lobby -->
+			<div class="private_lobby">
+				<div class="host">
+					<img src="./files/images/hostgame.svg" class="hostgame" />
+					<div class="host_label" l_content="host_title"></div>
+				</div>
+				<div class="join">
+					<img src="./files/images/joingame.svg" class="joingame" />
+					<div class="join_label" l_content="join_title"></div>
+				</div>
+			</div>
+			<!-- Private Host -->
+			<div class="lobby_name_label" l_content="lobby_name_label"></div>
+			<div class="lobby_name">
+				<input id="hlobby_name" class="lobby_name_value" type="text" l_content="lobbyname_placeholder" l_attr="placeholder"/>
+				<img src="./files/images/copy.svg" class="copy" />
+			</div>
+			<div class="create_game"><p l_content="create_game"></p></div>
+			<div class="host_hint" l_content="host_hint"></div>
+			<!-- Private Join -->
+			<div class="lobby_name_wrapper">
+				<input id="jlobby_name" class="input-lobby_name" type="text" l_content="lobbyname_placeholder" l_attr="placeholder"/>
+			</div>
+			<div class="join_game"><p l_content="join_to_game"></p></div>
+			<div class="join_hint" l_content="join_hint"></div>
+			<!-- Host wait -->
+			<!-- In-Game -->
+			<div class="container">
+				<div class="above-game">
+					<div class="scores-container">
+						<p class="your_name"></p>
+						<div class="private_score"><p class="p_score">0:0</p></div>
+						<p class="opponent_name"></p>
+						<p class="your_rating"></p>
+						<p class="game_time">0:00</p>
+						<p class="opponent_rating"></p>
+						<div id="your_score" class="score-container"></div>
+						<div class="timer-container"><p></p></div>
+						<div id="opponent_score" class="score-container"></div>
+					</div>
+					<div class="br-scores-container">
+						<div class="br_players">
+							<div class="brp_1" data-brpid="">
+								<img src="files/images/avatars/icon-profile.png" class="mini-avatar" />
+								<!--<img src="files/images/brlose-icon.svg" class="brlose-icon" />-->
+							</div>
+							<!--<span class="tooltiptext tt_brp_1"></span>-->
+							<div class="brp_2" data-brpid="">
+								<img src="files/images/avatars/icon-profile.png" class="mini-avatar" />
+								<!--<img src="files/images/brlose-icon.svg" class="brlose-icon" />-->
+							</div>
+							<!--<span class="tooltiptext tt_brp_2"></span>-->
+							<div class="brp_3" data-brpid="">
+								<img src="files/images/avatars/icon-profile.png" class="mini-avatar" />
+								<!--<img src="files/images/brlose-icon.svg" class="brlose-icon" />-->
+							</div>
+							<!--<span class="tooltiptext tt_brp_3"></span>-->
+							<div class="brp_4" data-brpid="">
+								<img src="files/images/avatars/icon-profile.png" class="mini-avatar" />
+								<!--<img src="files/images/brlose-icon.svg" class="brlose-icon" />-->
+							</div>
+							<!--<span class="tooltiptext tt_brp_4"></span>-->
+							<div class="brp_5" data-brpid="">
+								<img src="files/images/avatars/icon-profile.png" class="mini-avatar" />
+								<!--<img src="files/images/brlose-icon.svg" class="brlose-icon" />-->
+							</div>
+							<!--<span class="tooltiptext tt_brp_5"></span>-->
+							<div class="brp_6" data-brpid="">
+								<img src="files/images/avatars/icon-profile.png" class="mini-avatar" />
+								<!--<img src="files/images/brlose-icon.svg" class="brlose-icon" />-->
+							</div>
+							<!--<span class="tooltiptext tt_brp_6"></span>-->
+							<div class="brp_7" data-brpid="">
+								<img src="files/images/avatars/icon-profile.png" class="mini-avatar" />
+								<!--<img src="files/images/brlose-icon.svg" class="brlose-icon" />-->
+							</div>
+							<!--<span class="tooltiptext tt_brp_7"></span>-->
+							<div class="brp_8" data-brpid="">
+								<img src="files/images/avatars/icon-profile.png" class="mini-avatar" />
+								<!--<img src="files/images/brlose-icon.svg" class="brlose-icon" />-->
+							</div>
+							<!--<span class="tooltiptext tt_brp_8"></span>-->
+							<div class="brp_9" data-brpid="">
+								<img src="files/images/avatars/icon-profile.png" class="mini-avatar" />
+								<!--<img src="files/images/brlose-icon.svg" class="brlose-icon" />-->
+							</div>
+							<!--<span class="tooltiptext tt_brp_9"></span>-->
+							<div class="brp_10" data-brpid="">
+								<img src="files/images/avatars/icon-profile.png" class="mini-avatar" />
+								<!--<img src="files/images/brlose-icon.svg" class="brlose-icon" />-->
+							</div>
+							<!--<span class="tooltiptext tt_brp_10"></span>-->
+						</div>
+						<!--<div class="br_players_alive_label"><p l_content="br_players_alive_label"></p></div>
+						<div class="br_game_time"><p>0:00</p></div>
+						<div class="br_your_score_label"><p l_content="br_your_score_label"></p></div>-->
+						<div class="br_alive"><p></p></div>
+						<div class="br_nickname_left"><p></p></div>
+						<div class="br_timer"><p>0:30</p></div>
+						<div class="br_your_score"><p>0</p></div>
+						<div class="br_alive2"><p></p></div>
+						<div class="br_nickname_right"><p></p></div>
+					</div>
+					<div class="solo-scores-container">
+						<div class="speedrun-checkpoints">
+							<div class="checkpoint one tile16">
+								<div class="cp_value"><p>16</p></div><div class="cp_time"><p>0:00:000</p></div>
+							</div>
+							<div class="checkpoint two tile32">
+								<div class="cp_value"><p>32</p></div><div class="cp_time"><p>0:00:000</p></div>
+							</div>
+							<div class="checkpoint three tile64">
+								<div class="cp_value"><p>64</p></div><div class="cp_time"><p>0:00:000</p></div>
+							</div>
+							<div class="checkpoint tile128">
+								<div class="cp_value"><p>128</p></div><div class="cp_time"><p>0:00:000</p></div>
+							</div>
+							<div class="checkpoint tile256">
+								<div class="cp_value"><p>256</p></div><div class="cp_time"><p>0:00:000</p></div>
+							</div>
+							<div class="checkpoint tile512">
+								<div class="cp_value"><p>512</p></div><div class="cp_time"><p>0:00:000</p></div>
+							</div>
+							<div class="checkpoint tile1024">
+								<div class="cp_value"><p>1024</p></div><div class="cp_time"><p>0:00:000</p></div>
+							</div>
+							<div class="checkpoint tile2048">
+								<div class="cp_value"><p>2048</p></div><div class="cp_time"><p>0:00:000</p></div>
+							</div>
+							<div class="checkpoint tile4096">
+								<div class="cp_value"><p>4096</p></div><div class="cp_time"><p>0:00:000</p></div>
+							</div>
+							<div class="checkpoint tile8192">
+								<div class="cp_value"><p>8192</p></div><div class="cp_time"><p>0:00:000</p></div>
+							</div>
+							<div class="checkpoint tile16384">
+								<div class="cp_value"><p>16384</p></div><div class="cp_time"><p>0:00:000</p></div>
+							</div>
+							<div class="checkpoint tile32768">
+								<div class="cp_value"><p>32768</p></div><div class="cp_time"><p>-</p></div>
+							</div>
+						</div>
+						<div class="speedrun-score-timer">
+							<div class="srw_timer"><p class="speedrun_timer">0:00:000</p></div>
+							<div class="srw_score"><p class="speedrun_score">0</p></div>
+						</div>
+						<div class="speedrun_buttons">
+							<div id="menu" class="srb_menu">
+								<img class="srb_icon" src="./files/images/combined-shape.svg">
+							</div>
+							<span class="tooltiptext tt_fsrb_menu" l_content="goto_menu"></span>
+							<div id="stop_run" class="srb_best_run">
+								<img class="srb_icon" src="./files/images/clock.svg">
+								<img class="srb_icon_updated" src="./files/images/arrow.svg">
+							</div>
+							<span class="tooltiptext tt_fsrb_bestrun" l_content="speedruncurrent_title"></span>
+							<div class="restart_button" l_content="btn_restart"></div>
+						</div>
+					</div>
+				</div>
+				<div class="game-container">
+					<div class="grid-container">
+						<div class="grid-row">
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+						</div>
+						<div class="grid-row">
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+						</div>
+						<div class="grid-row">
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+						</div>
+						<div class="grid-row">
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+						</div>
+					</div>
+					<div class="tile-container"></div>
+				</div>
+			</div>
+			<!-- Profile -->
+			<div class="profile_wrapper">
+			  	<div class="info_main">
+			  		<img src="files/images/avatars/icon-profile.png" class="profile-avatar" />
+			  		<span class="profile-status-online"></span>
+			  		<p class="profile-nickname">Nickname</p>
+			  		<p class="profile-status">Online</p>
+			  	</div>
+			  	<div class="info_rating">
+			  		<img src="files/images/icon-pts.svg" class="icon_pts" />
+			  		<p class="irtl_value">192 pts</p>
+			  	</div>
+			  	<div class="info_top_position">
+			  		<img src="files/images/ladders-ico.svg" class="ladders_ico" />
+			  		<p class="irtl_value">-1</p>
+			  	</div>
+			  	<div class="info_league">
+			  		<img src="files/images/icon-bronzeladders.svg" class="icon_ladders ignore_replace" />
+			  		<p class="irtl_value">Bronze</p>
+			  	</div>
+			  	<div class="info_statistics"><span class='hlinel'></span><p class="is_title" l_content="is_title"></p><span class='hliner'></span></div>
+			  	<div class="info_statistics_matches"><p class="is_label" l_content="ismatches"></p><p class="is_value">0</p></div>
+			  	<div class="info_statistics_apm"><p class="is_label" l_content="isapm"></p><p class="is_value">0</p></div>
+			  	<div class="info_statistics_avg_duration"><p class="is_label" l_content="isavgduration"></p><p class="is_value">0</p></div>
+			  	<div class="info_statistics_wins"><p class="is_label" l_content="iswins"></p><p class="is_value">0</p></div>
+			  	<div class="info_statistics_loses"><p class="is_label" l_content="isloses"></p><p class="is_value">0</p></div>
+			  	<div class="info_statistics_winrate"><p class="is_label" l_content="iswinrate"></p><p class="is_value">0</p></div>
+			  	<img src="files/images/mh-shape.svg" class="info_match_history">
+			  	<!--<div class="info_match_history"><p class="i_mh" l_content="i_matchhistory"></p></div>-->
+			  	<div class="info_statistics_br"><span class='hlinel_br'></span><p class="is_title" l_content="is_title_br"></p><span class='hliner_br'></span></div>
+			  	<div class="info_statistics_br_rank1"><p class="is_label" l_content="isrank1"></p><p class="is_value">0</p></div>
+			  	<div class="info_statistics_br_avg_rank"><p class="is_label" l_content="isavgrank"></p><p class="is_value">0</p></div>
+			  	<div class="info_statistics_br_total_br"><p class="is_label" l_content="istotalbr"></p><p class="is_value">0</p></div>
+			</div>
+			<!-- Match History -->
+			<div class="list_matchhistory">
+				<div class="lmh_match win">
+					<p class="lmhm_player_nickname">Player Nickname</p>
+					<p class="lmhm_opponent_nickname">Opponent Nickname</p>
+					<p class="lmhm_player_score">999999</p>
+					<p class="lmhm_opponent_score">9999999</p>
+					<div class="lmhm_pts">
+						<p>+20 pts</p>
+					</div>
+					<div class="lmhm_duration">
+						<p>3.5 min</p>
+					</div>
+					<div class="lmhm_reason">
+						<p>No moves</p>
+					</div>
+				</div>
+			</div>
+			<!-- Ready Countdown -->
+			<div class='ready_countdown_wrapper'>
+				<div id="rcw_player1" class="rcw_player_entity1">
+					<div class="rcw_nickname"><p>WWWWWWWWWWWWWWW1</p></div>
+					<div class="rcw_rating"><p>9999 pts</p></div>
+					<div class="rcw_avatar"><img src="files/images/avatars/icon-profile.png" /></div>
+				</div>
+				<p class="rcw_vs">VS</p>
+				<div id="rcw_player2" class="rcw_player_entity2">
+					<div class="rcw_nickname"><p>WWWWWWWWWWWWWWW2</p></div>
+					<div class="rcw_rating"><p>9999 pts</p></div>
+					<div class="rcw_avatar"><img src="files/images/avatars/icon-profile.png" /></div>
+				</div>
+				<p class="rcw_label_countdown" l_content="rcw_label_countdown"></p>
+				<img src="./files/images/Rolling-1s-60px.svg" class="icon_rolling" />
+				<p class="rcw_countdown" id="rcw_countdown"></p>
+			</div>
+			<!-- Ready Check -->
+			<p class="ready_text" l_content="are_you_ready"></p>
+			<div id="ready_accept" class="ready_accept"><p l_content="i_am_ready"></p></div>
+			<img id='cancel_ready' src="./files/images/icon-cancel.svg" class="icon_cancel" />
+			<!-- Speedrun Best -->
+			<div class="speedrun_best_results">
+				<div class="checkpoint tile16">
+					<img class="icon_updated" src="./files/images/arrow_update.svg">
+					<div class="cp_value"><p>16</p></div><div class="cp_time"><p>-</p></div>
+				</div>
+				<div class="checkpoint tile32">
+					<img class="icon_updated" src="./files/images/arrow_update.svg">
+					<div class="cp_value"><p>32</p></div><div class="cp_time"><p>-</p></div>
+				</div>
+				<div class="checkpoint tile64">
+					<img class="icon_updated" src="./files/images/arrow_update.svg">
+					<div class="cp_value"><p>64</p></div><div class="cp_time"><p>-</p></div>
+				</div>
+				<div class="checkpoint tile128">
+					<img class="icon_updated" src="./files/images/arrow_update.svg">
+					<div class="cp_value"><p>128</p></div><div class="cp_time"><p>-</p></div>
+				</div>
+				<div class="checkpoint tile256">
+					<img class="icon_updated" src="./files/images/arrow_update.svg">
+					<div class="cp_value"><p>256</p></div><div class="cp_time"><p>-</p></div>
+				</div>
+				<div class="checkpoint tile512">
+					<img class="icon_updated" src="./files/images/arrow_update.svg">
+					<div class="cp_value"><p>512</p></div><div class="cp_time"><p>-</p></div>
+				</div>
+				<div class="checkpoint tile1024">
+					<img class="icon_updated" src="./files/images/arrow_update.svg">
+					<div class="cp_value"><p>1024</p></div><div class="cp_time"><p>-</p></div>
+				</div>
+				<div class="checkpoint tile2048">
+					<img class="icon_updated" src="./files/images/arrow_update.svg">
+					<div class="cp_value"><p>2048</p></div><div class="cp_time"><p>-</p></div>
+				</div>
+				<div class="checkpoint tile4096">
+					<img class="icon_updated" src="./files/images/arrow_update.svg">
+					<div class="cp_value"><p>4096</p></div><div class="cp_time"><p>-</p></div>
+				</div>
+				<div class="checkpoint tile8192">
+					<img class="icon_updated" src="./files/images/arrow_update.svg">
+					<div class="cp_value"><p>8192</p></div><div class="cp_time"><p>-</p></div>
+				</div>
+				<div class="checkpoint tile16384">
+					<img class="icon_updated" src="./files/images/arrow_update.svg">
+					<div class="cp_value"><p>16384</p></div><div class="cp_time"><p>-</p></div>
+				</div>
+				<div class="checkpoint tile32768">
+					<img class="icon_updated" src="./files/images/arrow_update.svg">
+					<div class="cp_value"><p>32768</p></div><div class="cp_time"><p>-</p></div>
+				</div>
+				<!--<div class="speedrun_best_results_share">
+					<img src="./files/images/share-icon.svg">
+					<p l_content="share"></p>
+				</div>-->
+			</div>
+			<div class="modal_gameover">
+				<div class="speedrun_mode">
+					<div class="srm_endgame_title"><p class="srmet_label" l_content="speedruncurrent_title"></p></div>
+					<div class="srm_endgame_results">
+						<div class="checkpoint tile16">
+							<div class="cp_value"><p>16</p></div><div class="cp_time"><p>-</p></div>
+						</div>
+						<div class="checkpoint tile32">
+							<div class="cp_value"><p>32</p></div><div class="cp_time"><p>-</p></div>
+						</div>
+						<div class="checkpoint tile64">
+							<div class="cp_value"><p>64</p></div><div class="cp_time"><p>-</p></div>
+						</div>
+						<div class="checkpoint tile128">
+							<div class="cp_value"><p>128</p></div><div class="cp_time"><p>-</p></div>
+						</div>
+						<div class="checkpoint tile256">
+							<div class="cp_value"><p>256</p></div><div class="cp_time"><p>-</p></div>
+						</div>
+						<div class="checkpoint tile512">
+							<div class="cp_value"><p>512</p></div><div class="cp_time"><p>-</p></div>
+						</div>
+						<div class="checkpoint tile1024">
+							<div class="cp_value"><p>1024</p></div><div class="cp_time"><p>-</p></div>
+						</div>
+						<div class="checkpoint tile2048">
+							<div class="cp_value"><p>2048</p></div><div class="cp_time"><p>-</p></div>
+						</div>
+						<div class="checkpoint tile4096">
+							<div class="cp_value"><p>4096</p></div><div class="cp_time"><p>-</p></div>
+						</div>
+						<div class="checkpoint tile8192">
+							<div class="cp_value"><p>8192</p></div><div class="cp_time"><p>-</p></div>
+						</div>
+						<div class="checkpoint tile16384">
+							<div class="cp_value"><p>16384</p></div><div class="cp_time"><p>-</p></div>
+						</div>
+						<div class="checkpoint tile32768">
+							<div class="cp_value"><p>32768</p></div><div class="cp_time"><p>-</p></div>
+						</div>
+					</div>
+					<div class="srm_endgame_buttons">
+						<div id="menu" class="endgame_menu">
+							<img class="endgame_icon" src="./files/images/combined-shape.svg">
+						</div>
+						<span class="tooltiptext tt_srmegb_menu" l_content="goto_menu"></span>
+						<div id="best_run" class="endgame_best_run">
+							<img class="endgame_icon" src="./files/images/clock.svg">
+							<img class="endgame_icon_updated" src="./files/images/arrow.svg">
+						</div>
+						<span class="tooltiptext tt_bestrun" l_content="speedrunbest_title"></span>
+						<div id="again" class="endgame_again">
+							<p l_content="btn_restart"></p>
+						</div>
+						<!--<div id="share_speedrun_results" class="endgame_share">
+							<img class="endgame_icon" src="./files/images/share-icon.svg">
+						</div>-->
+					</div>
+				</div>
+				<img src="./files/images/close-icon.svg" class="close-btn-br" />
+				<div class="endgame_image"></div>
+				<div class="endgame_image_timer hidden"><p></p></div>
+				<p class="endgame_totaltime"></p>
+				<p class="endgame_status"></p>
+				<p class="endgame_pts"></p>
+				<p class="endgame_private_score">0:0</p>
+				<div class="endgame_scores">
+					<p class="endgame_your_name" data-profile=""></p>
+					<p class="endgame_your_score"></p>
+					<p class="endgame_your_reason"></p>
+					<p class="endgame_opponent_name" data-profile=""></p>
+					<p class="endgame_opponent_score"></p>
+					<p class="endgame_opponent_reason"></p>
+				</div>
+				<div class="battleroyale_mode">
+					<p class="endgame_result_table" l_content="br_result_table_lable"></p>
+					<p class="endgame_brm_score_label" l_content="br_your_score_label"></p>
+					<p class="endgame_brm_score">0</p>
+					<p class="endgame_brm_reason"></p>
+					<div class="endgame_brm_rt">
+						<div class="ebrmrt-row-1" data-profile="">
+							<div class="ebrmrt-col-place"><img src="files/images/icon-goldladders.svg" class="icon_rt" /></div>
+							<div class="ebrmrt-col-nickname"></div>
+							<div class="ebrmrt-col-reason"></div>
+							<div class="ebrmrt-col-score"></div>
+						</div>
+						<div class="ebrmrt-row-2" data-profile="">
+							<div class="ebrmrt-col-place"><img src="files/images/icon-silverladders.svg" class="icon_rt" /></div>
+							<div class="ebrmrt-col-nickname"></div>
+							<div class="ebrmrt-col-reason"></div>
+							<div class="ebrmrt-col-score"></div>
+						</div>
+						<div class="ebrmrt-row-3" data-profile="">
+							<div class="ebrmrt-col-place"><img src="files/images/icon-bronzeladders.svg" class="icon_rt" /></div>
+							<div class="ebrmrt-col-nickname"></div>
+							<div class="ebrmrt-col-reason"></div>
+							<div class="ebrmrt-col-score"></div>
+						</div>
+						<div class="ebrmrt-row-4" data-profile="">
+							<div class="ebrmrt-col-place">4.</div>
+							<div class="ebrmrt-col-nickname"></div>
+							<div class="ebrmrt-col-reason"></div>
+							<div class="ebrmrt-col-score"></div>
+						</div>
+						<div class="ebrmrt-row-5" data-profile="">
+							<div class="ebrmrt-col-place">5.</div>
+							<div class="ebrmrt-col-nickname"></div>
+							<div class="ebrmrt-col-reason"></div>
+							<div class="ebrmrt-col-score"></div>
+						</div>
+						<div class="ebrmrt-row-6" data-profile="">
+							<div class="ebrmrt-col-place">6.</div>
+							<div class="ebrmrt-col-nickname"></div>
+							<div class="ebrmrt-col-reason"></div>
+							<div class="ebrmrt-col-score"></div>
+						</div>
+						<div class="ebrmrt-row-7" data-profile="">
+							<div class="ebrmrt-col-place">7.</div>
+							<div class="ebrmrt-col-nickname"></div>
+							<div class="ebrmrt-col-reason"></div>
+							<div class="ebrmrt-col-score"></div>
+						</div>
+						<div class="ebrmrt-row-8" data-profile="">
+							<div class="ebrmrt-col-place">8.</div>
+							<div class="ebrmrt-col-nickname"></div>
+							<div class="ebrmrt-col-reason"></div>
+							<div class="ebrmrt-col-score"></div>
+						</div>
+						<div class="ebrmrt-row-9" data-profile="">
+							<div class="ebrmrt-col-place">9.</div>
+							<div class="ebrmrt-col-nickname"></div>
+							<div class="ebrmrt-col-reason"></div>
+							<div class="ebrmrt-col-score"></div>
+						</div>
+						<div class="ebrmrt-row-10" data-profile="">
+							<div class="ebrmrt-col-place">10.</div>
+							<div class="ebrmrt-col-nickname"></div>
+							<div class="ebrmrt-col-reason"></div>
+							<div class="ebrmrt-col-score"></div>
+						</div>
+					</div>
+				</div>
+				<div class="endgame_messaging">
+					<div class="review_wrap">
+						<div class="review_btn" value="like"></div>
+						<span class="tooltiptext tt_like">Like PlayerName</span>
+						<div class="review_btn" value="dislike"></div>
+						<span class="tooltiptext tt_dislike">Report PlayerName</span>
+					</div>
+					<div class="smiles_wrap">
+						<div id="my_geyser"></div>
+						<div class="smiles_content_wrap">
+							<div id="smiles">
+							</div>
+						</div>
+						<div id="enemy_geyser"></div>
+					</div>
+				</div>
+				<div class="endgame_buttons">
+					<div id="menu" class="endgame_menu">
+						<img class="endgame_icon" src="./files/images/combined-shape.svg">
+					</div>
+					<div id="again" class="endgame_again">
+						<img class="endgame_icon" src="./files/images/play.svg">
+						<p l_content="play_again"></p>
+					</div>
+					<div id="share" class="endgame_share">
+						<img class="endgame_icon" src="./files/images/share-icon.svg">
+					</div>
+				</div>
+			</div>
+			<div class="modal_surrender">
+				<p class="label_surrender" l_content="label_surrender"></p>
+				<div class="surrender_buttons">
+					<div id="continue" class="surrender_continue"><p l_content="surrender_continue"></p></div>
+					<div id="surrender" class="surrender_leave"><p l_content="surrender_leave"></p></div>
+				</div>
+			</div>
+			<div class="modal_surrender_br">
+				<p class="label_surrender" l_content="label_surrender_pmm"></p>
+				<div class="surrender_buttons">
+					<div id="continue_br" class="surrender_continue"><p l_content="surrender_continue"></p></div>
+					<div id="surrender_br" class="surrender_leave"><p l_content="surrender_leave"></p></div>
+				</div>
+			</div>
+			<div class="modal_brrt">
+			</div>
+			<div class="modal_leagueupdate">
+				<div class="league_image"></div>
+				<p class="league_message"></p>
+				<p class="league_to" l_content="leagueupdate_moved_to"></p>
+				<p class="league_ladder_title"></p>
+				<div class="league_buttons">
+					<div class="league_skip">
+						<p l_content="leagueupdate_skip"></p>
+					</div>
+					<div class="league_share">
+						<img src="./files/images/share-icon.svg">
+						<p l_content="share"></p>
+					</div>
+				</div>
+			</div>
+			<!-- Single Game -->
+			<div class="single-container">
+				<div class="above-game">
+					<div class="single-scores-container"><div class="score-container" style="margin-right: 6px" l_attr="text" l_content="score">0</div><div class="best-container" l_attr="text" l_content="best">0</div></div>
+					<a class="menu-button" l_content="goto_menu">Menu</a>
+					<a class="restart-button">
+						<svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14">
+							<path fill="#FAF8EF" d="M6.193 2.075V.261c0-.105-.061-.2-.158-.241-.097-.04-.21-.017-.283.06L2.913 2.93c-.1.102-.1.265 0 .366l2.839 2.851c.048.05.115.077.184.077.143 0 .258-.118.257-.26V4.148c2.03.136 3.608 1.827 3.612 3.87.005 2.148-1.724 3.892-3.862 3.897-2.137.005-3.874-1.732-3.879-3.88 0-.142-.115-.258-.258-.258H.258c-.142 0-.258.116-.258.259 0 3.292 2.657 5.962 5.935 5.962 3.277.071 5.992-2.54 6.064-5.833.07-3.292-2.529-6.02-5.806-6.091z"/>
+						</svg>
+					</a>
+					<span class="tooltiptext tt_restart-button" l_content="btn_restart"></span>
+					<a class="undo-button disabled">
+						<span class="text" l_content="undo_step">Ход назад</span>
+						<span class="count">?</span>
+						<div class="ub-loading">
+							<div class="line"></div>
+							<div class="line"></div>
+							<div class="line"></div>
+						</div>
+					</a>
+					<a class="store-button"></a>
+					<span class="tooltiptext tt_store-button" l_content="title_shop"></span>
+				</div>
+				<div class="game-container">
+					<div class="game-message">
+						<p></p>
+						<div class="lower">
+							<a class="keep-playing-button btn" l_content="keep_going">Keep going</a>
+							<a class="retry-button btn" l_content="try_again">Try again</a>
+							<a class="undo-button btn disabled">
+								<span class="text" l_content="undo_step">Ход назад</span>
+								<span class="count">?</span>
+							</a>
+						</div>
+					</div>
+					<div class="grid-container">
+						<div class="grid-row">
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+						</div>
+						<div class="grid-row">
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+						</div>
+						<div class="grid-row">
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+						</div>
+						<div class="grid-row">
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+							<div class="grid-cell"></div>
+						</div>
+					</div>
+					<div class="tile-container"></div>
+				</div>
+				<div class="leaderboard-container">
+					<div id="leaderboard-auth">
+						<div class = 'leaderboard_auth_text' l_content = "leaderboard_auth_text">
+						</div>
+						<div id = "leaderboard_signin">
+							<div class="button_part">
+								<img src="./files/images/google.svg" class="google" />
+							</div>
+							<p l_content="google_sing_in"></p>
+						</div>
+					</div>
+					
+					<div id="bestscore">
+						<div class="big-text"><span id="congrat" l_content="congratulations">Congratulations!</span><br><span l_content="best_score">Best Score</span>: <span id="score">0</span></div>
+						<div class="small-text" l_content="lb_suggestion">Want to get to the <br> highscore table?</div>
+						<div class="buttons">
+							<span class="btn save" l_content="yes">Yes</span>
+							<span class="btn cancel" l_content="no">No</span>
+							<a class="undo-button disabled">
+								<span class="text" l_content="undo_step">Ход назад</span>
+								<span class="count">?</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div id="start-lesson" class="start-lesson" style="display:none">
+					<div l_content="tutorial_1" class="big-text">Use your keyboard</div>
+					<div l_content="tutorial_2" class="small-text">to play</div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="180" height="119" viewBox="0 0 180 119">
+						<g fill="none" fill-rule="evenodd">
+							<g transform="translate(61.875)">
+								<rect width="52.031" height="51.972" x="2.109" y="2.109" fill="#FFFDF5" stroke="#8E7966" stroke-width="4.219" rx="8.438"/>
+								<path fill="#8E7966" d="M29.75 14.72l11.751 11.833c.458.461.686 1.012.686 1.655 0 .63-.228 1.175-.686 1.636l-1.353 1.363c-.434.46-.976.69-1.625.69-.65 0-1.191-.23-1.625-.69l-5.308-5.326v14.135c0 .63-.225 1.142-.676 1.536-.451.394-.996.59-1.634.59h-2.31c-.639 0-1.183-.196-1.634-.59-.451-.394-.677-.906-.677-1.536V25.881l-5.29 5.326a2.23 2.23 0 0 1-1.642.69 2.23 2.23 0 0 1-1.642-.69l-1.355-1.363c-.445-.473-.668-1.018-.668-1.636 0-.631.223-1.182.668-1.654L26.483 14.72c.444-.448.992-.672 1.642-.672.662 0 1.203.224 1.625.672z"/>
+							</g>
+							<g transform="matrix(1 0 0 -1 61.875 118)">
+								<rect width="52.031" height="51.972" x="2.109" y="2.109" fill="#FFFDF5" stroke="#8E7966" stroke-width="4.219" rx="8.438"/>
+								<path fill="#8E7966" d="M29.75 14.72l11.751 11.833c.458.461.686 1.012.686 1.655 0 .63-.228 1.175-.686 1.636l-1.353 1.363c-.434.46-.976.69-1.625.69-.65 0-1.191-.23-1.625-.69l-5.308-5.326v14.135c0 .63-.225 1.142-.676 1.536-.451.394-.996.59-1.634.59h-2.31c-.639 0-1.183-.196-1.634-.59-.451-.394-.677-.906-.677-1.536V25.881l-5.29 5.326a2.23 2.23 0 0 1-1.642.69 2.23 2.23 0 0 1-1.642-.69l-1.355-1.363c-.445-.473-.668-1.018-.668-1.636 0-.631.223-1.182.668-1.654L26.483 14.72c.444-.448.992-.672 1.642-.672.662 0 1.203.224 1.625.672z"/>
+							</g>
+							<g transform="matrix(0 1 1 0 .03 61.78)">
+								<rect width="52.031" height="51.972" x="2.109" y="2.109" fill="#FFFDF5" stroke="#8E7966" stroke-width="4.219" rx="8.438"/>
+								<path fill="#8E7966" d="M29.75 14.72l11.751 11.833c.458.461.686 1.012.686 1.655 0 .63-.228 1.175-.686 1.636l-1.353 1.363c-.434.46-.976.69-1.625.69-.65 0-1.191-.23-1.625-.69l-5.308-5.326v14.135c0 .63-.225 1.142-.676 1.536-.451.394-.996.59-1.634.59h-2.31c-.639 0-1.183-.196-1.634-.59-.451-.394-.677-.906-.677-1.536V25.881l-5.29 5.326a2.23 2.23 0 0 1-1.642.69 2.23 2.23 0 0 1-1.642-.69l-1.355-1.363c-.445-.473-.668-1.018-.668-1.636 0-.631.223-1.182.668-1.654L26.483 14.72c.444-.448.992-.672 1.642-.672.662 0 1.203.224 1.625.672z"/>
+							</g>
+							<g transform="rotate(90 59.095 120.875)">
+								<rect width="52.031" height="51.972" x="2.109" y="2.109" fill="#FFFDF5" stroke="#8E7966" stroke-width="4.219" rx="8.438"/>
+								<path fill="#8E7966" d="M29.75 14.72l11.751 11.833c.458.461.686 1.012.686 1.655 0 .63-.228 1.175-.686 1.636l-1.353 1.363c-.434.46-.976.69-1.625.69-.65 0-1.191-.23-1.625-.69l-5.308-5.326v14.135c0 .63-.225 1.142-.676 1.536-.451.394-.996.59-1.634.59h-2.31c-.639 0-1.183-.196-1.634-.59-.451-.394-.677-.906-.677-1.536V25.881l-5.29 5.326a2.23 2.23 0 0 1-1.642.69 2.23 2.23 0 0 1-1.642-.69l-1.355-1.363c-.445-.473-.668-1.018-.668-1.636 0-.631.223-1.182.668-1.654L26.483 14.72c.444-.448.992-.672 1.642-.672.662 0 1.203.224 1.625.672z"/>
+							</g>
+						</g>
+					</svg>
+				</div>
+			</div>	
+		</div>
+		<div class="footer">
+			<label class="night_switch" id="night_mode_checkbox">
+				<div class="slider"></div>
+			</label>
+			<p class="hint"></p>
+			<span class="tooltiptext tt_night_switch" l_content="night_mode"></span>
+			<div class="rules_button" l_content="btn_game_rules"></div>
+			<p class="online_counter"></p>
+			<div class = 'footer_img_container'>
+				<a class="footer_img_link" href="https://play.google.com/store/apps/details?id=com.moloko.multipayer2048&utm_source=Extension&utm_medium=2048main" target="_blank"><img src="./files/images/android_footer.svg"></a>
+				<span class="tooltiptext tt_social_footer tt_social_footer_wide" l_content="tooltip_android"></span>
+				<a class="footer_img_link" href="https://discord.gg/U26yRd84DR?utm_source=Extension&utm_medium=2048main" target="_blank"><img src="./files/images/discord_footer.svg"></a>
+				<span class="tooltiptext tt_social_footer" l_content="tooltip_discord"></span>
+				<a class="footer_img_link" href="https://www.facebook.com/2048Multiplayer/?utm_source=Extension&utm_medium=2048main" target="_blank"><img src="./files/images/facebook_footer.svg"></a>
+				<span class="tooltiptext tt_social_footer tt_social_footer_wide" l_content="tooltip_facebook"></span>
+			</div>
+			<a class="website_button" href="https://play2048.pro/?utm_source=Extension&utm_medium=2048main" target="_blank">
+				<img src="./files/images/website_footer.svg" class="icon_website">
+			</a>
+			<span class="tooltiptext tt_website" l_content="tooltip_website"></span>
+			<a class="feedback_button" href="mailto:support@browser-games.xyz">
+				<img src="./files/images/icon-feedback.svg" class="icon_feedback">
+			</a>
+			<span class="tooltiptext tt_feedback" l_content="tooltip_feedback"></span>
+			
+		</div>
+		<div class="matchmaking_popup">
+			<div class="mm_loading">
+				<div class="frag1"></div>
+				<div class="frag2"></div>
+				<div class="frag3"></div>
+				<div class="frag4"></div>
+				<div class="mmfrag1"></div>
+				<div class="mmfrag2"></div>
+				<div class="mmfrag3"></div>
+			</div>
+			<div class="mm_hint">1v1 Duel</div>
+			<img src="./files/images/mm_cancel.svg" class="mm_close-btn" id="mm_cancel"/>
+		</div>
+		<div class="share_popup_container" hidden>
+			<div class="share_popup">
+				<button class="close_button">
+					<img src="./files/images/icon-close.svg">
+				</button>
+				<h1 l_content="share"></h1>
+				<div class="menu_button_indicator">
+					<img src="./files/images/triangle-left.svg">
+					<img src="./files/images/triangle-right.svg">
+				</div>
+				<button class="social_button facebook"><img src="./files/images/icon-fb.svg"><span l_content="share_fb"></span></button>
+				<button class="social_button twitter"><img src="./files/images/icon-tw.svg"><span l_content="share_tw"></span></button>
+				<button class="social_button vk"><img src="./files/images/icon-vk.svg"><span l_content="share_vk"></span></button>
+				<input type="text" readonly class="social_button link" value="https://play2048.pro/?utm_source=sharing&utm_medium=ranks">
+			</div>
+		</div>
+		<!-- Old version shop -->
+		<div id="shop" class="products">
+			<div id="products">
+				<div class="header">
+					<div class="close_shop_btn"></div>
+					<div class="title">Shop</div>
+				</div>
+				<div class="content">
+					<div id="products_list">
+					</div>
+				</div>
+				<div class="footer">
+					<div class="text_panel">
+						<span class="currency">Select currency:</span>
+						<span class="report"><a href="mailto:support@browser-games.xyz">Report a problem</a></span>
+					</div>
+					<div class="currency_control">
+						<div class="left_btn btn"></div>
+						<ul>
+							<li value="USD">U.S. Dollar</li>
+							<li value="AUD">Australian Dollar</li>
+							<li value="CAD">Canadian Dollar</li>
+							<li value="EUR">Euro</li>
+							<li value="RUB">Russian Ruble</li>
+							<li value="GBP">Pound Sterling</li>
+						</ul>
+						<div class="right_btn btn"></div>
+					</div>
+				</div>
+			</div>
+			<div id="smiles_pack_1" class="product_promo">
+				<div class="pack_panel">
+					<div class="close_shop_btn"></div>
+					<div class="title"></div>
+					<div class="sub_title"></div>
+					<div class="icon"><img src=""></div>
+					<div class="buy_btn">BUY NOW</div>
+				</div>
+			</div>
+			<div id="night_mode" class="product_promo">
+				<div class="pack_panel">
+					<div class="close_shop_btn"></div>
+					<div class="title">Night mode</div>
+					<div class="sub_title">Comfort for your eyes when at night</div>
+					<div class="icon"><img src=""></div>
+					<div class="buy_btn">BUY NOW</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Old version shop -->
+		<!-- New version shop -->
+		<div id="new_shop" class="store-container">
+			<div id="products">
+				<div class="store-container-bg">
+					<div class="products-wrap">
+						<div class="big-text"></div>
+						<div class="small-text"></div>
+						<div class="products">
+							<div id="products-list">
+								<!--
+								<div class="product">
+									<img src="single_files/img/google.svg" class="icon">
+									<div class="title">12 undo moves</div>
+									<div class="buy-btn">1.99$</div>
+								</div>
+								-->
+							</div>
+						</div>
+						<div class="footer">
+							<div class="choose-currency">
+								<div class="text-wrap"><div class="text" l_content="choose_currency">Choose your currency</div></div>
+								<div class="currency-list">
+									<select>
+										<option value="USD">U.S. Dollar</option>
+										<option value="AUD">Australian Dollar</option>
+										<option value="CAD">Canadian Dollar</option>
+										<option value="EUR">Euro</option>
+										<option value="RUB">Russian Ruble</option>
+										<option value="GBP">Pound Sterling</option>
+									</select>
+								</div>
+							</div>
+							<div class="accaunt">
+								<div class="email"></div>
+								<div class="signout-btn" l_content="signout"></div>
+							</div>
+						</div>
+					</div>
+					<div class="close-btn"></div>
+					<div class="report_button">
+						<a href="mailto:support@browser-games.xyz" l_content="report_problem"></a>
+					</div>
+				</div>
+			</div>
+			<div id="night_mode_promo">
+				<div class="promo-popup">
+					<div class="title" l_content="night_mode">Night Mode</div>
+					<div class="description" l_content="night_mode_desc">Comfort for your eyes when at night</div>
+					<div class="image"></div>
+					<div class="store-btn">SHOP</div>
+					<div class="close-btn"></div>
+				</div>
+			</div>
+		</div>
+		<!-- End New version shop -->
+	</div>
+	<script src="./files/js/common.js"></script>
+	<script src="./files/js/auth.js"></script>
+	<script src="./single_files/store.js"></script>
+	<script src="./single_files/leaderboard.js"></script>
+	<script src="./single_files/popup.js"></script>
+	<script src="./files/js/aftergame.js"></script>
+	<script src="./files/js/popup.js"></script>
+</body>
+</html>
